@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>twitter</title>
+  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="text/template" id="tweet-view">
+    <div class="meta">
+      <time><%- time %></time>
+    </div>
+    <p class="tweet-text">
+      <%- content %>
+    </p>
+    <div class="tweet-actions">
+      <span class="fav">お気に入りに追加</span>
+      <span class="delete">削除</span>
+      <%= favorite %>
+    </div>
+    <img class="thumbnail" src="" width="48" height="48">
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <h1>twitter風UI</h1>
+    </header>
+    <div class="form">
+      <form class="tweet-form group">
+        <p class="error"></p>
+        <textarea class="tweet-box"></textarea>
+        <p class="message">
+          実際にtwitterに投稿されることはありません
+        </p>
+        <span class="count"></span>
+        <button class="tweet-button" type="submit">ツイート</button>
+      </form>
+    </div>
+    <div class="timeline"></div>
+    <footer class="footer">
+      &copy; 2014 keita
+    </footer>
+  </div>
+  <script src="./js/underscore.js"></script>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/backbone.js"></script>
+  <script src="./js/twitter.js"></script>
+</body>
+</html>
